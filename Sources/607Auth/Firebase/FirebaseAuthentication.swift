@@ -6,8 +6,9 @@
 //
 
 import Foundation
-import FirebaseAuth
-import FirebaseCore
+@_implementationOnly import FirebaseAuth
+@_implementationOnly import FirebaseAuth
+@_implementationOnly import FirebaseCore
 import Combine
 
 class FirebaseAuthenticationService:AuthService{
