@@ -103,6 +103,22 @@ authManager.getCurrentUser()
     .store(in: &cancellables)
 ```
 
+#### Send Verification Email
+
+```swift
+authManager.sendVerificationEmail()
+    .sink(receiveCompletion: { completion in
+        switch completion {
+        case .finished:
+            print("Verification email sent successfully")
+        case .failure(let error):
+            print("Failed to send verification email: \(error)")
+        }
+    }, receiveValue: { _ in })
+    .store(in: &cancellables)
+```
+
+
 #### Delete User
 
 ```swift
