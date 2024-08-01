@@ -4,20 +4,29 @@
 import PackageDescription
 
 let package = Package(
-    name: "607Auth",
+    name: "SixZeroSevenAuth",
+    platforms: [
+        .iOS(.v13),
+        .macOS(.v10_15)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "607Auth",
-            targets: ["607Auth"]),
+            name: "SixZeroSevenAuth",
+            targets: ["SixZeroSevenAuth"]),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/supabase-community/supabase-swift.git", from: "0.2.1"),
+        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "10.0.0")
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "607Auth"),
+            name: "SixZeroSevenAuth",
+            dependencies: [
+                .product(name: "Supabase", package: "supabase-swift"),
+                .product(name: "FirebaseAuth", package: "firebase-ios-sdk")
+            ]),
         .testTarget(
-            name: "607AuthTests",
-            dependencies: ["607Auth"]),
+            name: "SixZeroSevenAuthTests",
+            dependencies: ["SixZeroSevenAuth"]),
     ]
 )
