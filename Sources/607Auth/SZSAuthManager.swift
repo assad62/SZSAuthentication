@@ -52,6 +52,10 @@ public class SZSAuthManager {
     public func deleteUser() -> AnyPublisher<Void,Error>{
         return authService.deleteUser()
     }
+    
+    public func sendEmailVerification() -> AnyPublisher<Void, Error>{
+        return authService.sendEmailVerification()
+    }
     // MARK: - Builder
     
     public class Builder {
