@@ -103,7 +103,7 @@ class FirebaseAuthenticationService:AuthService{
     func getCurrentUser() -> AnyPublisher<SZSUser?, Never> {
         return Future { [weak self] promise in
             if let currentUser = self?.auth.currentUser {
-                let user = SZSUser(id: currentUser.uid, email: currentUser.email ?? "", name: currentUser.displayName)
+                let user = SZSUser(id: currentUser.uid, email: currentUser.email ?? "", name: currentUser.displayName, isEmailVerified: currentUser.isEmailVerified)
                 promise(.success(user))
             } else {
                 promise(.success(nil))
