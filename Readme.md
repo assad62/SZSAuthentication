@@ -1,3 +1,20 @@
+# [DEPRECATED] SZSAuthManager
+
+⚠️ **DEPRECATION NOTICE** ⚠️
+This package is no longer maintained and will not receive further updates.
+Please use the new provider-specific packages instead:
+- For Firebase: [SZSFirebaseAuth]TODO
+- For Supabase: [SZSSupabaseAuth]TODO
+- For RestAPI:  [SZSRestAuth]TODO
+
+Reason:
+SZSAuthManager is being deprecated to focus on provider-specific authentication solutions, allowing
+for deeper integration with each provider's unique features. This approach simplifies maintenance,
+reduces complexity, and enables more efficient updates tailored to individual authentication
+services.
+
+---
+
 # SZSAuthManager
 
 SZSAuthManager is a flexible authentication management system for Swift applications. It supports multiple authentication providers and offers a unified interface for common authentication operations.
